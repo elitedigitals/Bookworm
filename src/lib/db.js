@@ -4,9 +4,9 @@ import dns from "dns";
 
 dotenv.config({ quiet: true });
 
-// if (process.env.NODE_ENV === "development") {
-//   dns.setServers(["8.8.8.8", "8.8.4.4"]);
-// }
+if (process.env.NODE_ENV === "development") {
+  dns.setServers(["8.8.8.8", "8.8.4.4"]);
+}
 
 
 export const connectDB = async () => {
